@@ -55,8 +55,8 @@ date <- Sys.Date()
 Firstly we download the data from GapMinder and save it locally. Then we read in the GapMinder data, clean up the column names and take a look at the data. 
 
 ```{r}
-dir.create("FionaSpooner/maternal_mortality/data/input", recursive = TRUE, showWarnings = FALSE)
-download.file('https://www.gapminder.org/documentation/documentation/gapdata010.xls', paste0('FionaSpooner/maternal_mortality/data/input/',date,'_gapminder_data.xls'))
+dir.create("data/input", recursive = TRUE, showWarnings = FALSE)
+download.file('https://www.gapminder.org/documentation/documentation/gapdata010.xls', paste0('data/input/',date,'_gapminder_data.xls'))
 
 df <- read_xls(paste0('FionaSpooner/maternal_mortality/data/input/',date,'_gapminder_data.xls'), col_names = TRUE)
 df <- df[-(1:16),]
